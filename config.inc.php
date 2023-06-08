@@ -32,7 +32,7 @@ require_once 'Typecho/Common.php';
 
 /** 程序初始化 */
 Typecho_Common::init();
-
+// 
 /** 定义数据库参数 */
 $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
