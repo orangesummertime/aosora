@@ -618,22 +618,22 @@ $(function(){
 	{
 		//对应swf解码修正
 		$string = rawurlencode($string);
-
+	
 		$ntexto = '';
 		$codekey = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
 		for ($i=0;$i<strlen($string);$i++) {
-			$ntexto .= substr('0000'.base_convert(ord($string{$i}),10,2),-8);
+			$ntexto .= substr('0000'.base_convert(ord($string[$i]),10,2),-8);
 		}
 		$ntexto .= substr('00000',0,6-strlen($ntexto)%6);
-
+	
 		$string = '';
 		for ($i=0;$i<strlen($ntexto)-1;$i=$i+6) {
 			$string .= $codekey{intval(substr($ntexto,$i,6),2)};
 		}
-
+	
 		return $string;
 	}
-
+	
 	/**
 	 * 解析主题配色
 	 * 
