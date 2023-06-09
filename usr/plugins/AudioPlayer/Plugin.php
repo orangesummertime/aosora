@@ -628,7 +628,7 @@ $(function(){
 	
 		$string = '';
 		for ($i=0;$i<strlen($ntexto)-1;$i=$i+6) {
-			$string .= $codekey{intval(substr($ntexto,$i,6),2)};
+			$string .= $codekey[intval(substr($ntexto,$i,6),2)];
 		}
 	
 		return $string;
