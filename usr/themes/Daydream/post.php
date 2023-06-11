@@ -23,6 +23,7 @@
         <i class="czs-location"></i>
         <?php echo $this->fields->pubPlace; ?>
     <?php endif; ?>
+    <?php $this->charactersNum(); ?>
 </div>
 <hr>
 </div>
@@ -32,13 +33,14 @@
         <i class="czs-time"></i> 这是一篇发布于 <?php echo $days->format('%a'); ?> 天以前的旧文。其中的部分内容可能已经过时。
     </div>
 <?php endif; ?>
+<div id="pjax-container">
 
 <div class="post-content">
     <?php echo exContent($this->content); ?>
 </div>
 <hr>
-
-
+</div>
+<div id="pjax-container">
 <ul>
     <li>
         协议：
@@ -64,7 +66,7 @@
         </li>
     <?php endif; ?>
 </ul>
-
+    </div>
 <!-- 如果有没有标题的「说说」，这个上一篇/下一篇就无法跳转 -->
 <!-- <div class="grid">
     <div><?php #$this->thePrev('上一篇：%s','没有了'); ?></div>
