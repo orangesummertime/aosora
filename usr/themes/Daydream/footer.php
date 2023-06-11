@@ -21,7 +21,6 @@ $(document).on('pjax:complete',
 function() {
     Nprogress.done();
 }) -->
-// 加载动画结束
 </script>
 <script>
 
