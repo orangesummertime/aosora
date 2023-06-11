@@ -11,7 +11,7 @@ $(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="
 </script>
 <!-- 引入结束 -->
 <!-- 加载动画 -->
-<script>
+<!-- <script>
 $(document).on('pjax:send',
 function() {
     Nprogress.start();
@@ -20,7 +20,7 @@ function() {
 $(document).on('pjax:complete',
 function() {
     Nprogress.done();
-})
+}) -->
 // 加载动画结束
 </script>
 <script>
