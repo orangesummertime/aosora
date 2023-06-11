@@ -7,10 +7,11 @@
 
 <h1><?php $this->title(); ?></h1>
 <hr>
+<div id="pjax-container">
 <div class="post-content">
     <?php echo exContent($this->content); ?>
 </div>
-
+</div>
 <?php $this->need('comments.php'); ?>
 
 <?php $this->need('footer.php'); ?>
