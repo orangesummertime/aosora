@@ -10,7 +10,7 @@
         <img src=<?php $this->fields->headPic(); ?> class="shadow rounded" alt="<?php $this->title(); ?>" title="<?php $this->title(); ?>">
     </a>
 <?php endif; ?> 
-
+<div id="pjax-container">
 <h1><?php $this->title() ?></h1>
 <div class="meta-info">
     <i class="czs-calendar"></i>
@@ -25,7 +25,7 @@
     <?php endif; ?>
 </div>
 <hr>
-
+</div>
 <?php $date1=date_create(date('c',$this->date->timeStamp)); $date2=date_create(date('c')); $days=date_diff($date1,$date2); ?>
 <?php if ($this->options->oldPosts != '' && $days->format('%a') > $this->options->oldPosts): ?>
     <div class="alert" role="alert">

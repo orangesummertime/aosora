@@ -43,7 +43,7 @@
         </div>
     <?php endif; ?>
 <?php } ?>
-
+<div id="pjax-container">
 <div id="comments">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
@@ -137,4 +137,5 @@
             })();
         </script>
     <?php endif; ?>
+</div>
 </div>

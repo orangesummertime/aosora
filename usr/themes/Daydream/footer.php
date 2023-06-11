@@ -1,6 +1,17 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-
+<!-- 引入pjax -->
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 <script>
+$(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
+    container: '#pjax-container',
+    fragment: '#pjax-container',
+    timeout: 8000
+})
+</script>
+<!-- 引入结束 -->
+<script>
+
     hljs.highlightAll();
     $(document).ready(function(){
         $("main .post-content img").addClass("img-fluid shadow rounded");
