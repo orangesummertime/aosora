@@ -21,7 +21,7 @@ $(document).on('pjax:complete',
 function() {
     Nprogress.done();
 }) -->
-</script>
+<!-- </script> -->
 <script>
 
     hljs.highlightAll();
@@ -35,12 +35,14 @@ function() {
      * Fancybox settings
      * https://web.archive.org/web/20210325170940/https://fancyapps.com/fancybox/3/docs
      */
-    $('[data-fancybox="gallery"]').fancybox({
-        buttons: ["zoom", "slideShow", "fullScreen", "download", "thumbs", "close"],
-        clickContent: function(current, event) {
-            return "close";
-        }
-    });
+    /*
+    *$('[data-fancybox="gallery"]').fancybox({
+    *    buttons: ["zoom", "slideShow", "fullScreen", "download", "thumbs", "close"],
+    *    clickContent: function(current, event) {
+    *        return "close";
+    *    }
+    *});
+    */
     renderMathInElement(
         document.body,
         {
