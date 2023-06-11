@@ -23,7 +23,7 @@
         <i class="czs-location"></i>
         <?php echo $this->fields->pubPlace; ?>
     <?php endif; ?>
-    <?php $this->charactersNum(); ?>
+    <div><span>全文共</span><?php $this->charactersNum(); ?><span>字</span></div>
 </div>
 <hr>
 </div>
